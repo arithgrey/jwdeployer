@@ -81,8 +81,19 @@ class DeploymentGenerator:
             exit(1)
 
 if __name__ == "__main__":
-    yaml_file = '../.ci/pipe/azure-pipelines_beta.yaml'
+    
+    yaml_file = '../.ci/pipe/azure-pipelines_beta.yml'
     env_config_file = '.env_conf'
+
+    if not os.path.exists(yaml_file):
+        # Si no existe, intenta encontrar el archivo con extensión .yaml
+        yaml_file_alternative = os.path.splitext(yaml_file)[0] + '.yaml'
+        if os.path.exists(yaml_file_alternative):
+            yaml_file = yaml_file_alternative
+        else:
+            print(f"Error: File '{yaml_file}' not found.")
+            exit(1)
+
     configurator = EnvConfigurator(yaml_file, env_config_file)
     configurator.configure_environment()
 
