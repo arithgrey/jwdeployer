@@ -31,7 +31,7 @@ class AliasManager:
 alias_manager = AliasManager()
 
 # Agregar alias
-alias_manager.add_alias('jw_service', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt')
+alias_manager.add_alias('jw_service', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt && python alias_manager.py')
 alias_manager.add_alias('jw_deployment', 'python deployment_to_kubernets.py')
 alias_manager.add_alias('access_token_cluster', 'kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep rancher | awk "{print $1}")')
 alias_manager.add_alias('activate_env', 'source env/bin/activate')
