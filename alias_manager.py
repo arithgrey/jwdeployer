@@ -87,7 +87,7 @@ alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
 
 #pip
 alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
-alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.py')
+alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.txt')
 
 # Recargar .bashrc
 alias_manager.reload_bashrc()
