@@ -33,8 +33,6 @@ alias_manager = AliasManager()
 # Agregar alias
 alias_manager.add_alias('jw_service', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt')
 alias_manager.add_alias('jw_deployment', 'python deployment_to_kubernets.py')
-alias_manager.add_alias('jw_service', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt')
-alias_manager.add_alias('jw_deployment', 'python deployment_to_kubernets.py')
 alias_manager.add_alias('access_token_cluster', 'kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep rancher | awk "{print $1}")')
 alias_manager.add_alias('activate_env', 'source env/bin/activate')
 alias_manager.add_alias('add_alias', 'nano  ~/.bashrc')
@@ -85,6 +83,11 @@ alias_manager.add_alias('install_istio_on_cluster_1', 'istioctl install --contex
 alias_manager.add_alias('install_istio_on_cluster_2', 'istioctl install --context="${CTX_CLUSTER2}" -f cluster2.yaml -y')
 alias_manager.add_alias('ip_mini', 'minikube ip')
 alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
+
+
+#pip
+alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
+alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.py')
 
 # Recargar .bashrc
 alias_manager.reload_bashrc()
