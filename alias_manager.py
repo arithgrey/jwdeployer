@@ -5,33 +5,43 @@ class AliasManager:
         self.bashrc_path = bashrc_path
 
     def alias_exists(self, name):
-        """Check if an alias already exists in the .bashrc file."""
+        """Check if an alias already exists in the .bashrc file and return its line number."""
         with open(self.bashrc_path, 'r') as file:
             lines = file.readlines()
-            for line in lines:
+            for i, line in enumerate(lines):
                 if line.startswith(f"alias {name}="):
-                    return True
-        return False
+                    return i
+        return None
 
     def add_alias(self, name, command):
-        if not self.alias_exists(name):
-            alias_command = f"alias {name}='{command}'\n"
+        alias_command = f"alias {name}='{command}'\n"
+        alias_line = self.alias_exists(name)
+
+        if alias_line is not None:
+            # Update the existing alias
+            with open(self.bashrc_path, 'r') as file:
+                lines = file.readlines()
+            lines[alias_line] = alias_command
+            with open(self.bashrc_path, 'w') as file:
+                file.writelines(lines)
+            print(f"Alias '{name}' actualizado con éxito.")
+        else:
+            # Add new alias
             with open(self.bashrc_path, 'a') as file:
                 file.write(alias_command)
             print(f"Alias '{name}' añadido con éxito.")
-        else:
-            print(f"Alias '{name}' ya existe.")
 
     def reload_bashrc(self):
         """Reload the .bashrc file to apply changes."""
         os.system('exec bash')
         print("Archivo .bashrc recargado.")
-
+        
 # Crear una instancia de AliasManager
 alias_manager = AliasManager()
 
 # Agregar alias
-alias_manager.add_alias('jw_service', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt && python alias_manager.py')
+alias_manager.add_alias('jw_srv', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt && python alias_manager.py')
+alias_manager.add_alias('jw_service', 'jw_srv && python alias_manager.py')
 alias_manager.add_alias('jw_deployment', 'python deployment_to_kubernets.py')
 alias_manager.add_alias('access_token_cluster', 'kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep rancher | awk "{print $1}")')
 alias_manager.add_alias('activate_env', 'source env/bin/activate')
