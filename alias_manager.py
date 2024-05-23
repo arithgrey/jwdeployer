@@ -84,7 +84,6 @@ alias_manager.add_alias('install_istio_on_cluster_2', 'istioctl install --contex
 alias_manager.add_alias('ip_mini', 'minikube ip')
 alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
 
-
 #pip
 alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
 alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.txt')
