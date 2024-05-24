@@ -2,7 +2,7 @@ import os
 from dotenv import dotenv_values
 
 class DockerManager:
-    def __init__(self, env_file=".env_docker"):
+    def __init__(self, env_file=".env_conf"):
         self.env_vars = dotenv_values(env_file)
 
     def login(self, registry, username=None, password=None):
@@ -23,7 +23,8 @@ class DockerManager:
         Build a Docker image.
         """
         full_image_name = f"{image_name}:{tag}"
-        build_command = f"docker build -t {full_image_name} ."
+        dockerfile_dir = self.env_vars.get("DOCKERFILE_DIR", "..")  # Obtener el directorio del Dockerfile (un nivel arriba)
+        build_command = f"docker build -t {full_image_name} -f {dockerfile_dir}/Dockerfile {dockerfile_dir}"
         result = os.system(build_command)
         if result != 0:
             print(f"Error building Docker image: {full_image_name}")
@@ -54,10 +55,10 @@ class DockerManager:
         for registry_key in registries:
             registry = self.env_vars[registry_key]
             full_image_name = f"{registry}/{image_name}:{tag}"
-            
             self.build_image(image_name, tag)
             self.login(registry, self.env_vars.get("DOCKER_USERNAME"), self.env_vars.get("DOCKER_PASSWORD"))
             self.push_image(full_image_name)
+            
 
 if __name__ == "__main__":
     docker_manager = DockerManager()
