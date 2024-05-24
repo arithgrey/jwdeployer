@@ -21,3 +21,10 @@ class EnvConfigurator:
         data = self.read_yaml()
         variables = self.extract_variables(data)
         self.save_env_config(variables)
+        
+        with open(self.env_config_file, 'a') as file:
+            file.write("# Configuraciones de Docker\n")
+            file.write("# GCR_NAME=gcr.io/my-gcp-project\n")
+            file.write("# ECR_NAME=aws_account_id.dkr.ecr.region.amazonaws.com/my-ecr-repo\n")
+            file.write("# DOCKER_IMAGE_NAME=fastapi-service\n")
+            file.write("# DOCKER_TAG=1.1\n")
