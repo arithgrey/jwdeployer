@@ -49,16 +49,13 @@ class DockerManager:
         """
         image_name = self.env_vars.get("DOCKER_IMAGE_NAME")
         tag = self.env_vars.get("DOCKER_TAG", "latest")
+        registries = self.env_vars.get("REGISTRIES", [])  # Obtener la lista de registros desde el .env
         
-        registries = [key for key in self.env_vars.keys() if key.endswith('_NAME')]
-
-        for registry_key in registries:
-            registry = self.env_vars[registry_key]
+        for registry in registries:
             full_image_name = f"{registry}/{image_name}:{tag}"
             self.build_image(image_name, tag)
             self.login(registry, self.env_vars.get("DOCKER_USERNAME"), self.env_vars.get("DOCKER_PASSWORD"))
             self.push_image(full_image_name)
-            
 
 if __name__ == "__main__":
     docker_manager = DockerManager()
