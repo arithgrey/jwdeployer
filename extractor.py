@@ -25,8 +25,8 @@ class EnvConfigurator:
         with open(self.env_config_file, 'a') as file:
 
             file.write("\n\n# VARIABLES DE AYUDA (LOCAL) \n")
-            file.write("# DBUSER=user_test\n")
-            file.write("# DBPASSWORD=db_password_test\n")
+            file.write("DBUSER=user_test\n")
+            file.write("DBPASSWORD=db_password_test\n")
             file.write("\n# Configuraciones de Docker\n\n")
             file.write("# DOCKER_IMAGE_NAME=fastapi-service\n")
             file.write("# DOCKER_TAG=1.1\n")
