@@ -23,7 +23,11 @@ class EnvConfigurator:
         self.save_env_config(variables)
         
         with open(self.env_config_file, 'a') as file:
-            file.write("# Configuraciones de Docker\n")
+
+            file.write("\n\n# VARIABLES DE AYUDA (LOCAL) \n")
+            file.write("# DBUSER=user_test\n")
+            file.write("# DBPASSWORD=db_password_test\n")
+            file.write("\n# Configuraciones de Docker\n\n")
             file.write("# DOCKER_IMAGE_NAME=fastapi-service\n")
             file.write("# DOCKER_TAG=1.1\n")
             file.write("# REGISTRIES=['gcr.io/my-gcp-project','aws_account_id.dkr.ecr.region.amazonaws.com/my-ecr-repo']\n")
