@@ -109,6 +109,8 @@ alias_manager.add_alias('delete_cluster_by_name', 'minikube delete -p ')
 #pip
 alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
 alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.txt')
+alias_manager.add_alias('deact', 'deactivate')
+
 
 #alias
 alias_manager.add_alias('update_alias', 'source  ~/.bashrc')
