@@ -31,3 +31,7 @@ class EnvConfigurator:
             file.write("# DOCKER_IMAGE_NAME=fastapi-service\n")
             file.write("# DOCKER_TAG=1.1\n")
             file.write("# REGISTRIES=['gcr.io/my-gcp-project','aws_account_id.dkr.ecr.region.amazonaws.com/my-ecr-repo']\n")
+
+            file.write("\n# Configuraciones que deben estar en azure-pipelines_beta.yaml en el bloque de variables \n\n")
+            file.write("# ACR: 'ACR-TYSON-BETA-V2'")
+            
