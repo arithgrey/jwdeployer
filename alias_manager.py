@@ -94,6 +94,18 @@ alias_manager.add_alias('install_istio_on_cluster_2', 'istioctl install --contex
 alias_manager.add_alias('ip_mini', 'minikube ip')
 alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
 
+#heml 
+
+alias_manager.add_alias('l_helm', 'helm list')
+alias_manager.add_alias('delete_heml', 'helm delete')
+
+
+#k8s
+alias_manager.add_alias('m_start', 'minikube start --force')
+alias_manager.add_alias('cln_minikube', 'minikube delete --all')
+alias_manager.add_alias('delete_cluster_by_name', 'minikube delete -p ')
+
+
 #pip
 alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
 alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.txt')
