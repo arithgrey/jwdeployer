@@ -116,6 +116,8 @@ alias_manager.add_alias('jw_service', 'jw_srv && python alias_manager.py')
 alias_manager.add_alias('jw_deployment', 'python deployment_to_kubernets.py')
 alias_manager.add_alias('jw_db', 'python db_manager.py')
 alias_manager.add_alias('jw_adapter', 'python azure_adapter.py')
+alias_manager.add_alias('jw_git_manager', 'python gitignore_manager.py')
+
 
 
 #alias
