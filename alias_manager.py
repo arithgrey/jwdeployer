@@ -124,5 +124,9 @@ alias_manager.add_alias('update_alias', 'source  ~/.bashrc')
 #docker
 alias_manager.add_alias('d_inspect_img', 'docker image inspect ')
 
+#java 
+
+alias_manager.add_alias('mvn_run', 'mvn spring-boot:run')
+
 # Recargar .bashrc
 alias_manager.reload_bashrc()
