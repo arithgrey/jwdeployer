@@ -121,5 +121,8 @@ alias_manager.add_alias('jw_adapter', 'python azure_adapter.py')
 #alias
 alias_manager.add_alias('update_alias', 'source  ~/.bashrc')
 
+#docker
+alias_manager.add_alias('d_inspect_img', 'docker image inspect ')
+
 # Recargar .bashrc
 alias_manager.reload_bashrc()
