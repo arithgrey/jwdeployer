@@ -107,6 +107,7 @@ alias_manager.add_alias('delete_cluster_by_name', 'minikube delete -p ')
 alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
 alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.txt')
 alias_manager.add_alias('deact', 'deactivate')
+alias_manager.add_alias('pip_ls', 'pip list')
 
 
 
