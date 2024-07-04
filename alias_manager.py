@@ -135,6 +135,8 @@ alias_manager.add_alias('mvn_run', 'mvn spring-boot:run')
 #git
 alias_manager.add_alias('g_add_', 'git add .')
 alias_manager.add_alias('g_comm_', 'git commit -m ')
+alias_manager.add_alias('g_push', 'git push')
+
 
 
 # Recargar .bashrc
