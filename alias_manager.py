@@ -120,6 +120,7 @@ alias_manager.add_alias('jw_db', 'python db_manager.py')
 alias_manager.add_alias('jw_adapter', 'python azure_adapter.py')
 alias_manager.add_alias('jw_git_manager', 'python gitignore_manager.py')
 alias_manager.add_alias('jw_docker_manager','python dockerignore_manager.py')
+alias_manager.add_alias('jw_clean_service','cd .. && rm -Rf jwdeployer')
 
 #alias
 alias_manager.add_alias('update_alias', 'source  ~/.bashrc')
