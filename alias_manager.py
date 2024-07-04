@@ -99,6 +99,7 @@ alias_manager.add_alias('delete_heml', 'helm delete')
 
 #k8s
 alias_manager.add_alias('m_start', 'minikube start --force')
+alias_manager.add_alias('m_stop', 'minikube stop --force')
 alias_manager.add_alias('cln_minikube', 'minikube delete --all')
 alias_manager.add_alias('delete_cluster_by_name', 'minikube delete -p ')
 
