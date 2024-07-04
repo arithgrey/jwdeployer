@@ -132,5 +132,10 @@ alias_manager.add_alias('d_inspect_img', 'docker image inspect ')
 
 alias_manager.add_alias('mvn_run', 'mvn spring-boot:run')
 
+#git
+alias_manager.add_alias('g_add_', 'git add .')
+alias_manager.add_alias('g_comm_', 'git commit -m ')
+
+
 # Recargar .bashrc
 alias_manager.reload_bashrc()
