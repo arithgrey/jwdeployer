@@ -44,7 +44,7 @@ def load_config(module_name: str) -> dict:
 def main():
     config = load_config('repository_config')
     repo_urls = config.repositories
-    base_path = './services'
+    base_path = '../services'
 
     repo_manager = GitRepositoryManager()
     processor = RepositoryProcessor(repo_manager)
