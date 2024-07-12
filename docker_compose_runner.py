@@ -22,13 +22,15 @@ class DockerComposeRunner:
         for compose_file in docker_compose_files:
             print(f"Running docker-compose up in {compose_file}...")
             os.chdir(os.path.dirname(compose_file))
-            result = subprocess.run(["docker-compose", "up", "-d"])
+            result = subprocess.run(["/usr/local/bin/docker-compose", "up", "-d"])
             if result.returncode != 0:
                 print(f"Error executing docker-compose up in {compose_file}.")
+            else:
+                print(f"Successfully ran docker-compose up in {compose_file}")
+        
+        return docker_compose_files
 
 if __name__ == "__main__":
-    
-    print("al final del servicio indica en que directorio se encuentran los docker-compose ejemplo jw_docker_compose_runner_service /home/arith")
     if len(sys.argv) < 2:
         print("Usage: python script.py <base_directory>")
         sys.exit(1)
@@ -39,4 +41,11 @@ if __name__ == "__main__":
         sys.exit(1)
     
     runner = DockerComposeRunner(base_directory)
-    runner.run_docker_compose_up()
+    docker_compose_files = runner.run_docker_compose_up()
+    
+    if docker_compose_files:
+        print("Docker Compose files found and executed in the following directories:")
+        for compose_file in docker_compose_files:
+            print(os.path.dirname(compose_file))
+    else:
+        print("No Docker Compose files were found or executed.")
