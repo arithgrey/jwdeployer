@@ -144,7 +144,8 @@ alias_manager.add_alias('g_add_', 'git add .')
 alias_manager.add_alias('g_comm_', 'git commit -m ')
 alias_manager.add_alias('g_push', 'git push')
 
-
+#DOCS
+alias_manager.add_alias('show_readme', 'add_env && pip install grip && grip')
 
 # Recargar .bashrc
 alias_manager.reload_bashrc()
