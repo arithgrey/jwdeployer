@@ -121,6 +121,8 @@ alias_manager.add_alias('jw_adapter', 'python azure_adapter.py')
 alias_manager.add_alias('jw_git_manager', 'python gitignore_manager.py')
 alias_manager.add_alias('jw_docker_manager','python dockerignore_manager.py')
 alias_manager.add_alias('jw_clean_service','cd .. && rm -Rf jwdeployer')
+alias_manager.add_alias('jw_clone_service','python repository_manager.py')
+alias_manager.add_alias('jw_alias_service','python alias_manager.py')
 
 #alias
 alias_manager.add_alias('update_alias', 'source  ~/.bashrc')
