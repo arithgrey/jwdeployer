@@ -82,6 +82,8 @@ alias_manager.add_alias('expose_2', 'minikube service hola-mundo --profile="find
 alias_manager.add_alias('expose_fastapi', 'kubectl port-forward svc/fastapi-service-v1-stable 8080:80 -n devops')
 alias_manager.add_alias('expose_services_on_cluster_1', 'kubectl --context="${CTX_CLUSTER1}" apply -n istio-system -f expose-services.yaml')
 alias_manager.add_alias('fgrep', 'fgrep --color=auto')
+
+#Kubernetes
 alias_manager.add_alias('g_clusters', 'minikube profile list')
 alias_manager.add_alias('g_nodes', 'kubectl get nodes')
 alias_manager.add_alias('grep', 'grep --color=auto')
@@ -91,6 +93,7 @@ alias_manager.add_alias('install_istio_on_cluster_2', 'istioctl install --contex
 alias_manager.add_alias('ip_mini', 'minikube ip')
 alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
 
+alias_manager.add_alias('k_gateways', 'kubectl get gateways -A')
 #heml 
 
 alias_manager.add_alias('l_helm', 'helm list')
