@@ -237,7 +237,7 @@ alias_manager.add_alias('k_check_container_restart_count', 'kubectl get pods -o 
 alias_manager.add_alias('k_get_hpa', 'kubectl get hpa')
 alias_manager.add_alias('k_describe_hpa', 'kubectl describe hpa')
 alias_manager.add_alias('k_delete_pod', 'kubectl delete pod')
-
+alias_manager.add_alias('k_get_virtual_service', 'kubectl get virtualservice')
 # Alias para obtener información de recursos
 alias_manager.add_alias('k_get_top_pods', 'kubectl top pods')
 alias_manager.add_alias('k_get_top_nodes', 'kubectl top nodes')
