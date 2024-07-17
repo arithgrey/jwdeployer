@@ -188,6 +188,8 @@ alias_manager.add_alias('k_istio_delete', 'istioctl delete -f')
 alias_manager.add_alias('k_istio_check_inject', 'istioctl check-inject')
 alias_manager.add_alias('k_istio_inject', 'istioctl kube-inject -f')
 alias_manager.add_alias('k_istio_wait', 'istioctl wait --for=condition=ready')
+alias_manager.add_alias('k_exec', 'kubectl exec -it')
+
 
 alias_manager.add_alias('k_get_all_resources', 'kubectl get all --all-namespaces')
 alias_manager.add_alias('k_scale_deployment', 'kubectl scale --replicas=')
