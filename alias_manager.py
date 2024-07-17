@@ -92,6 +92,9 @@ alias_manager.add_alias('install_istio_on_cluster_1', 'istioctl install --contex
 alias_manager.add_alias('install_istio_on_cluster_2', 'istioctl install --context="${CTX_CLUSTER2}" -f cluster2.yaml -y')
 alias_manager.add_alias('ip_mini', 'minikube ip')
 alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
+alias_manager.add_alias('k_use_context_', 'kubectl config use-context ')
+alias_manager.add_alias('k_show_context_', 'kubectl config get-contexts')
+
 
 alias_manager.add_alias('k_gateways', 'kubectl get gateways -A')
 #heml 
