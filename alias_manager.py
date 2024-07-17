@@ -236,6 +236,7 @@ alias_manager.add_alias('k_get_failed_containers', 'kubectl get pods -o jsonpath
 alias_manager.add_alias('k_check_container_restart_count', 'kubectl get pods -o jsonpath="{.items[*].status.containerStatuses[?(@.restartCount>0)].name}"')
 alias_manager.add_alias('k_get_hpa', 'kubectl get hpa')
 alias_manager.add_alias('k_describe_hpa', 'kubectl describe hpa')
+alias_manager.add_alias('k_delete_pod', 'kubectl delete pod')
 
 # Alias para obtener información de recursos
 alias_manager.add_alias('k_get_top_pods', 'kubectl top pods')
