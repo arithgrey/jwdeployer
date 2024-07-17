@@ -234,6 +234,20 @@ alias_manager.add_alias('k_get_deployment_rollout_status', 'kubectl rollout stat
 alias_manager.add_alias('k_get_stuck_pods', 'kubectl get pods --field-selector=status.phase!=Running')
 alias_manager.add_alias('k_get_failed_containers', 'kubectl get pods -o jsonpath="{.items[?(@.status.containerStatuses[?(@.state.waiting)])].metadata.name}"')
 alias_manager.add_alias('k_check_container_restart_count', 'kubectl get pods -o jsonpath="{.items[*].status.containerStatuses[?(@.restartCount>0)].name}"')
+alias_manager.add_alias('k_get_hpa', 'kubectl get hpa')
+alias_manager.add_alias('k_describe_hpa', 'kubectl describe hpa')
+
+# Alias para obtener información de recursos
+alias_manager.add_alias('k_get_top_pods', 'kubectl top pods')
+alias_manager.add_alias('k_get_top_nodes', 'kubectl top nodes')
+alias_manager.add_alias('k_get_resource_quota', 'kubectl get resourcequota')
+alias_manager.add_alias('k_describe_resource_quota', 'kubectl describe resourcequota')
+alias_manager.add_alias('k_get_pod_resource_limits', 'kubectl get pods -o=jsonpath="{.items[*].spec.containers[*].resources}"')
+alias_manager.add_alias('k_get_pod_status', 'kubectl get pods -o=custom-columns="NAME:.metadata.name,STATUS:.status.phase,RESTARTS:.status.containerStatuses[0].restartCount"')
+alias_manager.add_alias('k_get_node_info', 'kubectl describe nodes')
+alias_manager.add_alias('k_get_container_logs_with_timestamps', 'kubectl logs --timestamps')
+alias_manager.add_alias('k_get_events_for_workload', 'kubectl get events --field-selector involvedObject.kind=Deployment')
+alias_manager.add_alias('k_get_pod_conditions', 'kubectl get pods -o=jsonpath="{.items[*].status.conditions}"')
 
 # Recargar .bashrc
 alias_manager.reload_bashrc()
