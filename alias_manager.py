@@ -94,6 +94,8 @@ alias_manager.add_alias('ip_mini', 'minikube ip')
 alias_manager.add_alias('k_apply_', 'kubectl apply -f .')
 alias_manager.add_alias('k_use_context_', 'kubectl config use-context ')
 alias_manager.add_alias('k_show_context_', 'kubectl config get-contexts')
+alias_manager.add_alias('k_get_ingress_ip', 'kubectl get svc istio-ingressgateway -n istio-system')
+
 
 
 alias_manager.add_alias('k_gateways', 'kubectl get gateways -A')
