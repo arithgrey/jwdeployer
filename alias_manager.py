@@ -249,5 +249,17 @@ alias_manager.add_alias('k_get_container_logs_with_timestamps', 'kubectl logs --
 alias_manager.add_alias('k_get_events_for_workload', 'kubectl get events --field-selector involvedObject.kind=Deployment')
 alias_manager.add_alias('k_get_pod_conditions', 'kubectl get pods -o=jsonpath="{.items[*].status.conditions}"')
 
+# Alias para identificar problemas en cargas de trabajo
+alias_manager.add_alias('k_get_failed_deployments', 'kubectl get deployments --field-selector=status.replicas!=status.availableReplicas')
+alias_manager.add_alias('k_get_overutilized_pods', 'kubectl get pods --sort-by=.status.containerStatuses[0].restartCount --field-selector=status.phase!=Running')
+alias_manager.add_alias('k_get_high_memory_usage', 'kubectl top pods --sort-by=MEMORY')
+alias_manager.add_alias('k_get_high_cpu_usage', 'kubectl top pods --sort-by=CPU')
+alias_manager.add_alias('k_get_stuck_jobs', 'kubectl get jobs --field-selector=status.succeeded=0,status.failed>0')
+alias_manager.add_alias('k_get_recently_crashed_pods', 'kubectl get pods --field-selector=status.phase=Failed --sort-by=.status.startTime')
+alias_manager.add_alias('k_get_unscheduled_pods', 'kubectl get pods --field-selector=status.phase=Pending')
+alias_manager.add_alias('k_get_pod_restart_counts', 'kubectl get pods --output=jsonpath="{.items[*].metadata.name} {.status.containerStatuses[*].restartCount}"')
+alias_manager.add_alias('k_get_pod_resource_requests', 'kubectl get pods -o=jsonpath="{.items[*].spec.containers[*].resources.requests}"')
+alias_manager.add_alias('k_get_terminated_jobs', 'kubectl get jobs --field-selector=status.succeeded>0')
+
 # Recargar .bashrc
 alias_manager.reload_bashrc()
