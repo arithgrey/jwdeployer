@@ -253,6 +253,7 @@ alias_manager.add_alias('k_get_node_info', 'kubectl describe nodes')
 alias_manager.add_alias('k_get_container_logs_with_timestamps', 'kubectl logs --timestamps')
 alias_manager.add_alias('k_get_events_for_workload', 'kubectl get events --field-selector involvedObject.kind=Deployment')
 alias_manager.add_alias('k_get_pod_conditions', 'kubectl get pods -o=jsonpath="{.items[*].status.conditions}"')
+alias_manager.add_alias('k_exec_curl', 'k_exec  curlpod -- /bin/sh')
 
 # Alias para identificar problemas en cargas de trabajo
 alias_manager.add_alias('k_get_failed_deployments', 'kubectl get deployments --field-selector=status.replicas!=status.availableReplicas')
