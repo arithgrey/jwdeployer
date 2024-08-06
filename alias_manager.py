@@ -267,6 +267,7 @@ alias_manager.add_alias('k_get_pod_restart_counts', 'kubectl get pods --output=j
 alias_manager.add_alias('k_get_pod_resource_requests', 'kubectl get pods -o=jsonpath="{.items[*].spec.containers[*].resources.requests}"')
 alias_manager.add_alias('k_get_terminated_jobs', 'kubectl get jobs --field-selector=status.succeeded>0')
 alias_manager.add_alias('k_get_service_entry', 'kubectl get serviceentry -n istio-system')
+alias_manager.add_alias('k_roll_out', 'kubectl rollout restart deployment ')
 
 alias_manager.add_alias('k_rollout_deployment', 'kubectl rollout restart deployment ')
 alias_manager.add_alias('k_get_current_context', 'kubectl config current-context')
