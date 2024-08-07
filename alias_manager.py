@@ -173,6 +173,8 @@ alias_manager.add_alias('k_delete_file', 'kubectl delete -f')
 alias_manager.add_alias('k_logs', 'kubectl logs')
 alias_manager.add_alias('k_exec_into_pod', 'kubectl exec -it')
 
+alias_manager.add_alias('k_delete', 'kubectl delete -f .')
+
 # Alias de istioctl
 alias_manager.add_alias('k_istio_version', 'istioctl version')
 alias_manager.add_alias('k_istio_proxy_status', 'istioctl proxy-status')
