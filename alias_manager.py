@@ -117,6 +117,7 @@ alias_manager.add_alias('pip_fr', 'pip freeze > requirements.txt')
 alias_manager.add_alias('pip_inst_requirements', 'pip install -r requirements.txt')
 alias_manager.add_alias('deact', 'deactivate')
 alias_manager.add_alias('pip_ls', 'pip list')
+alias_manager.add_alias('act_env', 'source env/bin/activate')
 
 
 

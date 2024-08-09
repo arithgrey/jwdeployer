@@ -7,5 +7,6 @@ repositories = [
     'https://github.com/arithgrey/enid-store.git',
     'https://github.com/arithgrey/service-faqs.git',
     'https://github.com/arithgrey/service-references.git',
-    'https://github.com/arithgrey/frontend-store.git'
+    'https://github.com/arithgrey/frontend-store.git',
+    'https://github.com/arithgrey/reverse_proxy_nginx.git'
 ]
