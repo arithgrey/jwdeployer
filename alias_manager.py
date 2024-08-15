@@ -97,7 +97,6 @@ alias_manager.add_alias('k_show_context_', 'kubectl config get-contexts')
 alias_manager.add_alias('k_get_ingress_ip', 'kubectl get svc istio-ingressgateway -n istio-system')
 
 
-
 alias_manager.add_alias('k_gateways', 'kubectl get gateways -A')
 #heml 
 
@@ -120,7 +119,6 @@ alias_manager.add_alias('pip_ls', 'pip list')
 alias_manager.add_alias('act_env', 'source env/bin/activate')
 
 
-
 #service
 alias_manager.add_alias('jw_srv', 'git clone git@github.com:arithgrey/jwdeployer.git && cd jwdeployer && python3 -m venv env && source env/bin/activate && pip install -r requirements.txt && python alias_manager.py')
 alias_manager.add_alias('jw_service', 'jw_srv && python alias_manager.py')
@@ -134,6 +132,7 @@ alias_manager.add_alias('jw_clone_service','python repository_manager.py')
 alias_manager.add_alias('jw_alias_service','python alias_manager.py')
 alias_manager.add_alias('jw_repository_service','python repository_manager.py')
 alias_manager.add_alias('jw_docker_compose_runner_service','python docker_compose_runner.py')
+alias_manager.add_alias('jw_docker_compose_runner','python compose_runner.py')
 alias_manager.add_alias('jw_pull_service', 'go_jw_service &&  activate_env && python pull_manager.py')
 
 #alias
@@ -279,7 +278,7 @@ alias_manager.add_alias('k_rollout_deployment', 'kubectl rollout restart deploym
 alias_manager.add_alias('k_get_current_context', 'kubectl config current-context')
 # Recargar .bashrc
 
-alias_manager.add_alias('enid_up', '_go_jw_service && activate_env && jw_docker_compose_runner_service /home/_enid_service/services')
+alias_manager.add_alias('enid_up', '_go_jw_service && activate_env && jw_docker_compose_runner /home/_enid_service/services')
 alias_manager.add_alias('local_up', 'go_jw_service && activate_env && jw_docker_compose_runner_service /home/arithgrey/enid_service/services')
 alias_manager.add_alias('status_enid', 'go_scripts && make status_enid_service')
 alias_manager.add_alias('go_jw_service', 'cd /home/arithgrey/enid_service/jwdeployer')
