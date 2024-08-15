@@ -281,7 +281,7 @@ alias_manager.add_alias('k_get_current_context', 'kubectl config current-context
 alias_manager.add_alias('local_up', 'go_jw_service && activate_env && jw_docker_compose_runner_service /home/arithgrey/enid_service/services')
 alias_manager.add_alias('status_enid', 'go_scripts && make status_enid_service')
 alias_manager.add_alias('go_jw_service', 'cd /home/arithgrey/enid_service/jwdeployer')
-alias_manager.add_alias('_go_jw_service', 'cd /home/_enid_service/services/jwdeployer')
+alias_manager.add_alias('_go_jw_service', 'cd /home/_enid_service/jwdeployer/')
 
 alias_manager.add_alias('go_enid_store', 'cd /home/arithgrey/enid_service/services/enid-store/enid')
 alias_manager.add_alias('go_faqs', 'cd /home/arithgrey/enid_service/services/service-faqs/')
