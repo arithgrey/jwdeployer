@@ -153,6 +153,8 @@ alias_manager.add_alias('g_add_', 'git add .')
 alias_manager.add_alias('g_comm_', 'git commit -m ')
 alias_manager.add_alias('g_push', 'git push')
 alias_manager.add_alias('g_mixed', 'git reset --mixed ')
+alias_manager.add_alias('g_st', 'git status')
+
 
 #DOCS
 alias_manager.add_alias('show_readme', 'add_env && pip install grip && grip')
@@ -279,5 +281,27 @@ alias_manager.add_alias('k_get_current_context', 'kubectl config current-context
 alias_manager.add_alias('local_up', 'go_jw_service && activate_env && jw_docker_compose_runner_service /home/arithgrey/enid_service/services')
 alias_manager.add_alias('status_enid', 'go_scripts && make status_enid_service')
 alias_manager.add_alias('go_jw_service', 'cd /home/arithgrey/enid_service/jwdeployer')
+alias_manager.add_alias('_go_jw_service', 'cd /home/_enid_service/services/jwdeployer')
+
+alias_manager.add_alias('go_enid_store', 'cd /home/arithgrey/enid_service/services/enid-store/enid')
+alias_manager.add_alias('go_faqs', 'cd /home/arithgrey/enid_service/services/service-faqs/')
+alias_manager.add_alias('go_frontend', 'cd /home/arithgrey/enid_service/services/frontend-store/')
+alias_manager.add_alias('go_leads', 'cd /home/arithgrey/enid_service/services/service_leads')
+alias_manager.add_alias('go_oauth', 'cd /home/arithgrey/enid_service/services/service-oauth')
+alias_manager.add_alias('go_references', 'cd /home/arithgrey/enid_service/services/service-references')
+alias_manager.add_alias('go_reverse_proxy', 'cd /home/arithgrey/enid_service/services/reverse_proxy_nginx')
+alias_manager.add_alias('go_scripts', 'cd /home/arithgrey/enid_service/services/service-scripts-deployment')
+alias_manager.add_alias('go_stock', 'cd /home/arithgrey/enid_service/services/service_stock')
+
+#Enid
+alias_manager.add_alias('_go_enid_store', 'cd /home/_enid_service/services/enid-store/enid')
+alias_manager.add_alias('_go_faqs', 'cd /home/_enid_service/services/service-faqs/')
+alias_manager.add_alias('_go_frontend', 'cd /home/_enid_service/services/frontend-store/')
+alias_manager.add_alias('_go_leads', 'cd /home/_enid_service/services/service_leads')
+alias_manager.add_alias('_go_oauth', 'cd /home/_enid_service/services/service-oauth')
+alias_manager.add_alias('_go_references', 'cd /home/_enid_service/services/service-references')
+alias_manager.add_alias('_go_reverse_proxy', 'cd /home/_enid_service/services/reverse_proxy_nginx')
+alias_manager.add_alias('_go_scripts', 'cd /home/_enid_service/services/service-scripts-deployment')
+alias_manager.add_alias('_go_stock', 'cd /home/_enid_service/services/service_stock')
 
 alias_manager.reload_bashrc()
