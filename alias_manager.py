@@ -278,6 +278,8 @@ alias_manager.add_alias('k_roll_out', 'kubectl rollout restart deployment ')
 alias_manager.add_alias('k_rollout_deployment', 'kubectl rollout restart deployment ')
 alias_manager.add_alias('k_get_current_context', 'kubectl config current-context')
 # Recargar .bashrc
+
+alias_manager.add_alias('enid_up', '_go_jw_service && activate_env && jw_docker_compose_runner_service /home/_enid_service/services')
 alias_manager.add_alias('local_up', 'go_jw_service && activate_env && jw_docker_compose_runner_service /home/arithgrey/enid_service/services')
 alias_manager.add_alias('status_enid', 'go_scripts && make status_enid_service')
 alias_manager.add_alias('go_jw_service', 'cd /home/arithgrey/enid_service/jwdeployer')
