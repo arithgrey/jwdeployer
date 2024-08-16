@@ -294,6 +294,8 @@ alias_manager.add_alias('go_reverse_proxy', 'cd /home/arithgrey/enid_service/ser
 alias_manager.add_alias('go_scripts', 'cd /home/arithgrey/enid_service/services/service-scripts-deployment')
 alias_manager.add_alias('go_stock', 'cd /home/arithgrey/enid_service/services/service_stock')
 
+alias_manager.add_alias('go_find', 'cd /home/arithgrey/findep')
+
 #Enid
 alias_manager.add_alias('_go_enid_store', 'cd /home/_enid_service/services/enid-store/enid')
 alias_manager.add_alias('_go_faqs', 'cd /home/_enid_service/services/service-faqs/')
