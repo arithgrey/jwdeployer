@@ -57,6 +57,9 @@ alias_manager.add_alias('cluster_1', 'kubectl --context findep-calidad-uat-mx ge
 alias_manager.add_alias('cluster_2', 'kubectl --context findep-calidad-uat-mx-2 get all -n test')
 alias_manager.add_alias('cluster_inf', 'kubectl cluster-info')
 alias_manager.add_alias('co', 'git checkout')
+alias_manager.add_alias('pull_main', 'git checkout main && git pull origin main')
+
+
 alias_manager.add_alias('commit', 'git commit')
 alias_manager.add_alias('conf_minikube', 'minikube config view')
 alias_manager.add_alias('create_gateway_cluster_1', './gen-eastwest-gateway.sh  --network network1 | istioctl --context="${CTX_CLUSTER1}" install -y -f -')
