@@ -287,6 +287,9 @@ alias_manager.add_alias('status_enid', 'go_scripts && make status_enid_service')
 alias_manager.add_alias('go_jw_service', 'cd /home/arithgrey/enid_service/jwdeployer')
 alias_manager.add_alias('_go_jw_service', 'cd /home/_enid_service/jwdeployer/')
 
+alias_manager.add_alias('_go_enid', 'cd /home/_enid_service')
+
+
 alias_manager.add_alias('go_enid_store', 'cd /home/arithgrey/enid_service/services/enid-store/enid')
 alias_manager.add_alias('go_faqs', 'cd /home/arithgrey/enid_service/services/service-faqs/')
 alias_manager.add_alias('go_frontend', 'cd /home/arithgrey/enid_service/services/frontend-store/')
