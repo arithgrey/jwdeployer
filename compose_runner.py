@@ -1,11 +1,14 @@
 import os
 import subprocess
 import sys
+import logging
 
 class DockerComposeRunner:
-    def __init__(self, base_directory):
+    def __init__(self, base_directory, docker_compose_path="/usr/bin/docker-compose"):
         self.base_directory = base_directory
-    
+        self.docker_compose_path = docker_compose_path
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
     def find_docker_compose_files(self):
         docker_compose_files = []
         for root, dirs, files in os.walk(self.base_directory):
@@ -16,17 +19,17 @@ class DockerComposeRunner:
     def run_docker_compose_up(self):
         docker_compose_files = self.find_docker_compose_files()
         if not docker_compose_files:
-            print("No docker-compose.yml files found.")
+            logging.warning("No docker-compose.yml files found.")
             return
         
         for compose_file in docker_compose_files:
-            print(f"Running docker-compose up in {compose_file}...")
+            logging.info(f"Running docker-compose up in {compose_file}...")
             os.chdir(os.path.dirname(compose_file))
-            result = subprocess.run(["/usr/bin/docker-compose", "up", "-d"])
+            result = subprocess.run([self.docker_compose_path, "up", "-d"])
             if result.returncode != 0:
-                print(f"Error executing docker-compose up in {compose_file}.")
+                logging.error(f"Error executing docker-compose up in {compose_file}.")
             else:
-                print(f"Successfully ran docker-compose up in {compose_file}")
+                logging.info(f"Successfully ran docker-compose up in {compose_file}")
         
         return docker_compose_files
 
