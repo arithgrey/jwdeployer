@@ -16,20 +16,20 @@ class DockerComposeStopper:
                 docker_compose_files.append(os.path.join(root, 'docker-compose.yml'))
         return docker_compose_files
     
-    def run_docker_compose_stop(self):
+    def run_docker_compose_down(self):
         docker_compose_files = self.find_docker_compose_files()
         if not docker_compose_files:
             logging.warning("No docker-compose.yml files found.")
             return
         
         for compose_file in docker_compose_files:
-            logging.info(f"Running docker-compose stop in {compose_file}...")
+            logging.info(f"Running docker-compose down in {compose_file}...")
             os.chdir(os.path.dirname(compose_file))
-            result = subprocess.run([self.docker_compose_path, "stop"])
+            result = subprocess.run([self.docker_compose_path, "down"])
             if result.returncode != 0:
-                logging.error(f"Error executing docker-compose stop in {compose_file}.")
+                logging.error(f"Error executing docker-compose down in {compose_file}.")
             else:
-                logging.info(f"Successfully ran docker-compose stop in {compose_file}")
+                logging.info(f"Successfully ran docker-compose down in {compose_file}")
         
         return docker_compose_files
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     stopper = DockerComposeStopper(base_directory)
-    docker_compose_files = stopper.run_docker_compose_stop()
+    docker_compose_files = stopper.run_docker_compose_down()
     
     if docker_compose_files:
         print("Docker Compose files found and stopped in the following directories:")
