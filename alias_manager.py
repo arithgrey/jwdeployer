@@ -320,5 +320,7 @@ alias_manager.add_alias('exec_faqs', 'd_exec -it faqs_service /bin/ash')
 alias_manager.add_alias('exec_stock', 'd_exec -it stock_service /bin/ash')
 alias_manager.add_alias('exec_oauth', 'd_exec -it oauth_service /bin/ash')
 alias_manager.add_alias('exec_refences', 'd_exec -it references_service /bin/ash')
+alias_manager.add_alias('redis_flush','for container in $(docker ps --filter "name=redis" --format "{{.Names}}"); do docker exec -it $container redis-cli FLUSHDB; done')
+
 
 alias_manager.reload_bashrc()
