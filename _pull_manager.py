@@ -62,7 +62,7 @@ class DirectoryScanner:
 
 # Dependency Inversion: Usamos la abstracción GitService en lugar de una clase concreta
 def main():
-    path_to_services = "/home/arithgrey/enid_service/services/"
+    path_to_services = "/home/_enid_service/services"
     git_service = GitHubService()
     scanner = DirectoryScanner(path_to_services, git_service)
     scanner.scan_and_update()
