@@ -138,7 +138,7 @@ alias_manager.add_alias('jw_repository_service','go_jw_service && activate_env &
 alias_manager.add_alias('jw_docker_compose_runner_service','python docker_compose_runner.py')
 alias_manager.add_alias('jw_docker_compose_runner','python compose_runner.py')
 alias_manager.add_alias('jw_pull_service', 'go_jw_service &&  activate_env && python pull_manager.py')
-alias_manager.add_alias('jw_pull_service_', 'go_jw_service &&  activate_env && python _pull_manager.py')
+alias_manager.add_alias('_jw_pull_service', '_go_jw_service &&  activate_env && python _pull_manager.py')
 
 #alias
 alias_manager.add_alias('update_alias', 'source  ~/.bashrc')
