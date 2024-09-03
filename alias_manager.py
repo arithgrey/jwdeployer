@@ -100,7 +100,7 @@ alias_manager.add_alias('k_use_context_', 'kubectl config use-context ')
 alias_manager.add_alias('k_show_context_', 'kubectl config get-contexts')
 alias_manager.add_alias('k_get_ingress_ip', 'kubectl get svc istio-ingressgateway -n istio-system')
 
-
+alias_manager.add_alias('go_ngx', 'cd /home/arithgrey/enid_service/services/service_web')
 alias_manager.add_alias('k_gateways', 'kubectl get gateways -A')
 #heml 
 
