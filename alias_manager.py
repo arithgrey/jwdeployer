@@ -311,7 +311,7 @@ alias_manager.add_alias('go_find', 'cd /home/arithgrey/findep')
 #Enid
 alias_manager.add_alias('_go_enid_store', 'cd /home/_enid_service/services/enid-store/enid')
 alias_manager.add_alias('_go_faqs', 'cd /home/_enid_service/services/service-faqs/')
-alias_manager.add_alias('_go_frontend', 'cd /home/_enid_service/services/frontend-store/')
+alias_manager.add_alias('_go_frontend', 'cd /home/_enid_service/services/service-store')
 alias_manager.add_alias('_go_leads', 'cd /home/_enid_service/services/service_leads')
 alias_manager.add_alias('_go_oauth', 'cd /home/_enid_service/services/service-oauth')
 alias_manager.add_alias('_go_references', 'cd /home/_enid_service/services/service-references')
