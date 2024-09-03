@@ -159,6 +159,8 @@ alias_manager.add_alias('g_push', 'git push')
 alias_manager.add_alias('g_mixed', 'git reset --mixed ')
 alias_manager.add_alias('g_st', 'git status')
 
+alias_manager.add_alias('local_status', 'python git_status_checker.py /home/arithgrey/enid_service/services')
+
 
 #DOCS
 alias_manager.add_alias('show_readme', 'add_env && pip install grip && grip')
