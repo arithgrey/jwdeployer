@@ -319,6 +319,8 @@ alias_manager.add_alias('_go_reverse_proxy', 'cd /home/_enid_service/services/re
 alias_manager.add_alias('_go_scripts', 'cd /home/_enid_service/services/service-scripts-deployment')
 alias_manager.add_alias('_go_stock', 'cd /home/_enid_service/services/service_stock')
 
+ 
+alias_manager.add_alias('exec_leads', 'd_exec lead_service /bin/ash')
 alias_manager.add_alias('exec_enid', 'd_exec -it enid_service /bin/ash')
 alias_manager.add_alias('exec_faqs', 'd_exec -it faqs_service /bin/ash')
 alias_manager.add_alias('exec_stock', 'd_exec -it stock_service /bin/ash')
