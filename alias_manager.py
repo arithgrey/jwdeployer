@@ -159,7 +159,7 @@ alias_manager.add_alias('g_push', 'git push')
 alias_manager.add_alias('g_mixed', 'git reset --mixed ')
 alias_manager.add_alias('g_st', 'git status')
 
-alias_manager.add_alias('local_status', 'python git_status_checker.py /home/arithgrey/enid_service/services')
+alias_manager.add_alias('local_status', 'go_jw_service && activate_env && python git_status_checker.py /home/arithgrey/enid_service/services')
 alias_manager.add_alias('enid_status', 'python git_status_checker.py /home/_enid_service/services')
 
 
