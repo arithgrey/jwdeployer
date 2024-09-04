@@ -1,5 +1,8 @@
 import os
-from aliases import add_aliases
+from alias.commons import commons
+from alias.alias_linkerd import linkerd
+from alias.alias_git import git
+
 class AliasManager:
     def __init__(self, bashrc_path=os.path.expanduser("~/.bashrc")):
         self.bashrc_path = bashrc_path
@@ -38,5 +41,7 @@ class AliasManager:
         
 # Crear una instancia de AliasManager
 alias_manager = AliasManager()
-add_aliases(alias_manager)
+commons(alias_manager)
+linkerd(alias_manager)
+git(alias_manager)
 alias_manager.reload_bashrc()

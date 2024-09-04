@@ -1,9 +1,7 @@
-def add_aliases(alias_manager):
-    alias_manager.add_alias('check_east', 'linkerd check --pre --context east')
-    alias_manager.add_alias('check_west', 'linkerd check --pre --context west')
-    alias_manager.add_alias('clan_multi_clusters', 'cd /home/multicloud/ && ./clean_cluster.sh ')
-
+#general
+def commons(alias_manager):
     # Agregar alias
+    print("______________COMMONS")
     alias_manager.add_alias('access_token_cluster', 'kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep rancher | awk "{print $1}")')
     alias_manager.add_alias('activate_env', 'source env/bin/activate')
     alias_manager.add_alias('add_alias', 'nano  ~/.bashrc')
