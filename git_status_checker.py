@@ -2,6 +2,7 @@ import os
 import subprocess
 import argparse
 from typing import List
+from termcolor import colored
 
 class GitStatusChecker:
     def __init__(self, base_path: str):
@@ -24,9 +25,11 @@ class GitStatusChecker:
         """Check git status for each directory."""
         directories = self.get_directories()
         for directory in directories:
-            print(f"Checking status in: {directory}")
+            print(colored(f"Checking status in: {directory}", "cyan"))
+            print(colored("____________________", "green"))
             status = self.execute_git_status(directory)
-            print(status)
+            print(colored(status, "yellow"))
+            print(colored("____________________", "green"))
 
 def main():
     parser = argparse.ArgumentParser(description="Check git status for directories in the given path.")
