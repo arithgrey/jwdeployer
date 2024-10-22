@@ -4,6 +4,7 @@ from alias.alias_linkerd import linkerd
 from alias.alias_git import git
 from alias.alias_pip import pip
 from alias.jw_services import jw
+from alias.flutter import flutter
 
 class AliasManager:
     def __init__(self, bashrc_path=os.path.expanduser("~/.bashrc")):
@@ -46,6 +47,7 @@ alias_manager = AliasManager()
 commons(alias_manager)
 linkerd(alias_manager)
 git(alias_manager)
+flutter(alias_manager)
 pip(alias_manager)
 jw(alias_manager)
 
