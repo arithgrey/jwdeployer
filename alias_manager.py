@@ -5,6 +5,7 @@ from alias.alias_git import git
 from alias.alias_pip import pip
 from alias.jw_services import jw
 from alias.flutter import flutter
+from alias.docker import docker
 
 class AliasManager:
     def __init__(self, bashrc_path=os.path.expanduser("~/.bashrc")):
@@ -50,5 +51,7 @@ git(alias_manager)
 flutter(alias_manager)
 pip(alias_manager)
 jw(alias_manager)
+docker(alias_manager)
+
 
 alias_manager.reload_bashrc()
