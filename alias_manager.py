@@ -6,6 +6,7 @@ from alias.alias_pip import pip
 from alias.jw_services import jw
 from alias.flutter import flutter
 from alias.docker import docker
+from alias.django import dj
 
 class AliasManager:
     def __init__(self, bashrc_path=os.path.expanduser("~/.bashrc")):
@@ -52,6 +53,6 @@ flutter(alias_manager)
 pip(alias_manager)
 jw(alias_manager)
 docker(alias_manager)
-
+dj(alias_manager)
 
 alias_manager.reload_bashrc()
