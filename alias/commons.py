@@ -6,6 +6,7 @@ def commons(alias_manager):
     alias_manager.add_alias('activate_env', 'source env/bin/activate')
     alias_manager.add_alias('add_alias', 'nano  ~/.bashrc')
     alias_manager.add_alias('add_env', 'python3 -m venv env && source env/bin/activate')
+    alias_manager.add_alias('add_env_3.10', 'python3.10 -m venv env && source env/bin/activate')
     alias_manager.add_alias('add_namespace', 'kubectl create namespace ')
     alias_manager.add_alias('alias_grep', 'alias | grep ')
     alias_manager.add_alias('all_in_namespace', 'kubectl get all -n ')
