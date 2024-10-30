@@ -6,3 +6,4 @@ def git(alias_manager):
     alias_manager.add_alias("g_stash_apply","git stash apply")
     alias_manager.add_alias("g_st","git status")
     alias_manager.add_alias("g_co","git checkout ")
+    alias_manager.add_alias("g_br","git branch")
