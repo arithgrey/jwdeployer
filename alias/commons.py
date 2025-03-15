@@ -268,7 +268,7 @@ def commons(alias_manager):
     alias_manager.add_alias('go_reverse_proxy', 'cd /home/arithgrey/enid_service/services/reverse_proxy_nginx')
     alias_manager.add_alias('go_scripts', 'cd /home/arithgrey/enid_service/services/service-scripts-deployment')
     alias_manager.add_alias('go_stock', 'cd /home/arithgrey/enid_service/services/service_stock')
-
+    alias_manager.add_alias('go_assintence', 'cd /home/arithgrey/enid_service/services/assintence_service/')
     alias_manager.add_alias('go_find', 'cd /home/arithgrey/findep')
 
     #Enid
@@ -288,6 +288,8 @@ def commons(alias_manager):
     alias_manager.add_alias('exec_faqs', 'd_exec -it faqs_service /bin/ash')
     alias_manager.add_alias('exec_stock', 'd_exec -it stock_service /bin/ash')
     alias_manager.add_alias('exec_oauth', 'd_exec -it oauth_service /bin/ash')
+    alias_manager.add_alias('exec_assintence', 'd_exec -it assintence_ia_service /bin/ash')
+    
     alias_manager.add_alias('exec_refences', 'd_exec -it references_service /bin/ash')
     alias_manager.add_alias('redis_flush','for container in $(docker ps --filter "name=redis" --format "{{.Names}}"); do docker exec -it $container redis-cli FLUSHDB; done')
     alias_manager.add_alias('local_stop','go_jw_service && act_env && python docker_stop.py /home/arithgrey/enid_service/services/')
